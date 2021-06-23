@@ -13,6 +13,6 @@ The repo is following the usual 'dub' structure.
 # Building
 ## Linux
 1. Inside the `c/lpng1637/` directory run `./configure`.
-2. In your project add the dependency libapng-apng and build it via `dub build`
+2. In your project add the dependency libpng-apng and build it via `dub build`
 ## Windows
 TODO

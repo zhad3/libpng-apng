@@ -3,7 +3,7 @@ OLD_PWD=$PWD
 
 PACKAGE_DIR=$1
 
-if [ -f "$PACKAGE_DIR/c/build" ]; then
+if [ ! -d "$PACKAGE_DIR/c/build" ]; then
     mkdir -p "$PACKAGE_DIR/c/build"
 fi
 
