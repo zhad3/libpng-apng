@@ -1,6 +1,6 @@
 {
-	"name": "libpng",
-	"description": "D bindings to libpng.",
+	"name": "libpng-apng",
+	"description": "D bindings to libpng with the apng patch.",
 	"homepage": "http://libpng.org/",
 	"license": "Boost",
 	"authors": [
