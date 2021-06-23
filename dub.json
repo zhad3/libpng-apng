@@ -8,7 +8,12 @@
 		"Rémi Thebault"
 	],
 	"targetType": "sourceLibrary",
-	"dependencies": {
-	},
-	"libs": ["png"]
+    "preBuildCommands-linux": ["$PACKAGE_DIR/build_clibs.sh $PACKAGE_DIR"],
+    "preBuildCommands-windows": ["$PACKAGE_DIR/build_clibs.bat $PACKAGE_DIR"],
+
+    "sourceFiles-linux": ["$PACKAGE_DIR/c/build/libpng16.a"],
+    "sourceFiles-windows": ["$PACKAGE_DIR/c/build/libpng16.lib"],
+
+    "lflags-linux": ["$PACKAGE_DIR/c/build/libpng16.a"],
+    "lflags-windows": ["$PACKAGE_DIR/c/build/libpng16.lib"]
 }
