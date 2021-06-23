@@ -1,11 +1,12 @@
 module libpng.pngconf;
-/* pngconf.h - machine configurable file for libpng
+/* pngconf.h - machine-configurable file for libpng
  *
- * libpng version 1.6.17, March 26, 2015
+ * libpng version 1.6.37
  *
- * Copyright (c) 1998-2015 Glenn Randers-Pehrson
- * (Version 0.96 Copyright (c) 1996, 1997 Andreas Dilger)
- * (Version 0.88 Copyright (c) 1995, 1996 Guy Eric Schalnat, Group 42, Inc.)
+ * Copyright (c) 2018-2019 Cosmin Truta
+ * Copyright (c) 1998-2002,2004,2006-2016,2018 Glenn Randers-Pehrson
+ * Copyright (c) 1996-1997 Andreas Dilger
+ * Copyright (c) 1995-1996 Guy Eric Schalnat, Group 42, Inc.
  *
  * This code is released under the libpng license.
  * For conditions of distribution and use, see the disclaimer
@@ -50,20 +51,19 @@ alias png_ptrdiff_t = ptrdiff_t;
 //#define png_sizeof(x) (sizeof (x))
 
 
-/* png_alloc_size_t is guaranteed to be no smaller than png_size_t, and no
-* smaller than png_uint_32.  Casts from png_size_t or png_uint_32 to
-* png_alloc_size_t are not necessary; in fact, it is recommended not to use
-* them at all so that the compiler can complain when something turns out to be
-* problematic.
+/* png_alloc_size_t is guaranteed to be no smaller than size_t, and no smaller
+ * than png_uint_32.  Casts from size_t or png_uint_32 to png_alloc_size_t are
+ * not necessary; in fact, it is recommended not to use them at all, so that
+ * the compiler can complain when something turns out to be problematic.
 *
-* Casts in the other direction (from png_alloc_size_t to png_size_t or
+* Casts in the other direction (from png_alloc_size_t to size_t or
 * png_uint_32) should be explicitly applied; however, we do not expect to
 * encounter practical situations that require such conversions.
 *
 * PNG_SMALL_SIZE_T must be defined if the maximum value of size_t is less than
 * 4294967295 - i.e. less than the maximum value of png_uint_32.
 */
-alias png_alloc_size_t = png_size_t;
+alias png_alloc_size_t = size_t;
 
 
 /* Prior to 1.6.0 libpng offered limited support for Microsoft C compiler
@@ -100,8 +100,8 @@ alias png_charp                 = char                   *;
 alias png_const_charp           = const(char)            *;
 alias png_fixed_point_p         = png_fixed_point        *;
 alias png_const_fixed_point_p   = const(png_fixed_point) *;
-alias png_size_tp               = png_size_t             *;
-alias png_const_size_tp         = const(png_size_t)      *;
+alias png_size_tp               = size_t                 *;
+alias png_const_size_tp         = const(size_t)          *;
 
 
 
