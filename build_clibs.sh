@@ -13,6 +13,10 @@ fi
 
 cd $PACKAGE_DIR/c/lpng1637
 
+if [ ! -f "config.h" ]; then
+    /bin/sh "configure"
+fi
+
 make
 
 cd $OLD_PWD
