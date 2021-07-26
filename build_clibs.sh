@@ -22,7 +22,7 @@ LIBS_BACKUP=$LIBS
 LIBS=
 
 if [ ! -f "config.h" ] || [ ! -z $DUB_FORCE ]; then
-    ./configure
+    /bin/sh "configure"
 fi
 
 make
