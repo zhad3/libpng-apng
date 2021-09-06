@@ -17,11 +17,15 @@ fi
 
 cd "$PACKAGE_DIR/c/lpng1637"
 
+# This is somehow not executable in the docker image on alpine
+chmod a+x install-sh
+
 # Save LIBS env variable otherwise configure will fail
 LIBS_BACKUP=$LIBS
 LIBS=
 
 if [ ! -f "config.h" ] || [ ! -z $DUB_FORCE ]; then
+    chmod a+x install-sh
     /bin/sh "configure"
 fi
 
