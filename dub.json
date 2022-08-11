@@ -7,7 +7,7 @@
 		"Lionello Lunesu",
 		"Rémi Thebault"
 	],
-	"targetType": "sourceLibrary",
+	"targetType": "library",
     "preBuildCommands-linux": ["/bin/sh \"$PACKAGE_DIR/build_clibs.sh\" \"$PACKAGE_DIR\""],
     "preBuildCommands-windows": ["cmd /c \"\"$PACKAGE_DIR/build_clibs.bat\" \"$PACKAGE_DIR\"\""],
 
